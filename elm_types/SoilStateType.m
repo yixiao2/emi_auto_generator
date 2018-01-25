@@ -221,4 +221,3 @@ var.emi_constants_prefix = 'E2L_STATE';
 count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)
-generate_AddDataByID_code(alm_type)

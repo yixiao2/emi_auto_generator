@@ -28,4 +28,3 @@ count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
 
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)
-generate_AddDataByID_code(alm_type)
