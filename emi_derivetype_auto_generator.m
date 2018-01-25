@@ -5,7 +5,7 @@ addpath elm_types/
 Atm2LndType();
 CanopyStateType();
 ChemStateType();
-ColumnType();
+%ColumnType();
 EnergyFluxType();
 SoilHydrologyType();
 SoilStateType();
