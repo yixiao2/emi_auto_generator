@@ -24,7 +24,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

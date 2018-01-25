@@ -24,7 +24,7 @@ var.dim1_beg_name     = 'begg';
 var.dim1_end_name     = 'endg';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = '2';
-count=count+1;alm_type.pack_vars_at_grid_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.grid_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Incident diffuse solar radiation';
@@ -37,7 +37,7 @@ var.dim1_beg_name     = 'begg';
 var.dim1_end_name     = 'endg';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = '2';
-count=count+1;alm_type.pack_vars_at_grid_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.grid_level{count} = var; clear var;
 
 %
 % L2E at grid level
@@ -55,7 +55,7 @@ var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.emi_constants_prefix = 'L2E_STATE';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Downscaled atm temperature';
@@ -67,6 +67,6 @@ var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.emi_constants_prefix = 'L2E_STATE';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

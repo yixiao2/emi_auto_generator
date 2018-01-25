@@ -22,7 +22,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Evapotranspiration sink';
@@ -35,7 +35,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 03)
 var.name              = 'Dew sink';
@@ -46,7 +46,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 04)
 var.name              = 'Snow layer disappearance sink';
@@ -57,7 +57,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 05)
 var.name              = 'Snow layer disappearance sink';
@@ -68,7 +68,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 06)
 var.name              = 'Snow layer disappearance sink needed at restart';
@@ -79,7 +79,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 07)
 var.name              = 'Drainage sink';
@@ -92,7 +92,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 08)
 var.name              = 'Infiltration';
@@ -103,7 +103,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 % 
 % 09)
 var.name              = 'Drainage sink';
@@ -114,7 +114,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 10)
 var.name              = 'Gross evaporation from soil';
@@ -125,7 +125,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 11)
 var.name              = 'Gross evaporation infiltration';
@@ -136,7 +136,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 12)
 var.name              = 'Surface runoff';
@@ -147,7 +147,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 13)
 var.name              = 'Surface dew added to ground';
@@ -158,7 +158,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 14)
 var.name              = 'Surface dew added to snow pacK';
@@ -169,7 +169,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 15)
 var.name              = 'Sublimation vol from snow pack';
@@ -180,7 +180,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 16)
 var.name              = 'sublimation rate from snow pack';
@@ -191,7 +191,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 17)
 var.name              = 'Rate of surface standing water entering top soil';
@@ -202,7 +202,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 18)
 var.name              = 'Rate of snow entering top soil';
@@ -213,7 +213,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 19)
 var.name              = 'Root and soil water exchange';
@@ -226,7 +226,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 20)
 var.name              = 'Advective flux across different soil layer interfaces';
@@ -239,7 +239,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '0';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 21)
 var.name              = 'liquid water losted as drainage';
@@ -252,7 +252,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 22)
 var.name              = 'vegetation transpiration';
@@ -263,7 +263,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 23)
 var.name              = 'Root soil fraction';
@@ -276,7 +276,7 @@ var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 
 %
@@ -294,7 +294,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Snow layer disappearance sink';
@@ -305,7 +305,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

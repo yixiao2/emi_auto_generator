@@ -22,7 +22,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = '';
@@ -35,7 +35,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 03)
 var.name              = '';
@@ -48,7 +48,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 04)
 var.name              = '';
@@ -59,7 +59,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 05)
 var.name              = '';
@@ -70,7 +70,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 06)
 var.name              = '';
@@ -83,7 +83,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 07)
 var.name              = '';
@@ -96,7 +96,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 08)
 var.name              = '';
@@ -109,7 +109,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 09)
 var.name              = '';
@@ -122,7 +122,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 10)
 var.name              = '';
@@ -135,7 +135,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 11)
 var.name              = '';
@@ -148,7 +148,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 12)
 var.name              = '';
@@ -161,7 +161,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 13)
 var.name              = '';
@@ -174,7 +174,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 14)
 var.name              = '';
@@ -187,7 +187,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 15)
 var.name              = '';
@@ -200,7 +200,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '-nlevsno + 1';
 var.dim2_end_name     = '0';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 16)
 var.name              = '';
@@ -213,7 +213,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '-nlevsno + 1';
 var.dim2_end_name     = '0';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 17)
 var.name              = '';
@@ -226,7 +226,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '-nlevsno + 1';
 var.dim2_end_name     = '0';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 18)
 var.name              = '';
@@ -236,7 +236,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 19)
 var.name              = '';
@@ -247,7 +247,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 
 
@@ -268,7 +268,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = '';
@@ -281,7 +281,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 % 03)
 var.name              = '';
@@ -294,7 +294,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 
 %generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

@@ -22,7 +22,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Prior year maximum annual depth of thaw';
@@ -33,7 +33,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 
 %
@@ -51,7 +51,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
-count=count+1;alm_type.pack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.patch_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Canopy one-sided leaf area index with burying by snow';
@@ -62,7 +62,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
-count=count+1;alm_type.pack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.patch_level{count} = var; clear var;
 
 %
 % E2L at patch level
@@ -79,7 +79,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
-count=count+1;alm_type.unpack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.patch_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Sunlit projected leaf area index';
@@ -90,7 +90,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
-count=count+1;alm_type.unpack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.patch_level{count} = var; clear var;
 
 % 03)
 var.name              = 'Shaded projected leaf area index';
@@ -101,7 +101,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
-count=count+1;alm_type.unpack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.patch_level{count} = var; clear var;
 
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

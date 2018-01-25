@@ -24,7 +24,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Soil hydraulic conductivity';
@@ -37,7 +37,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 03)
 var.name              = 'Clapp and Hornberger parameter';
@@ -50,7 +50,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 04)
 var.name              = 'Minimum soil sucsatc';
@@ -63,7 +63,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 05)
 var.name              = 'Effective porosity';
@@ -76,7 +76,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 06)
 var.name              = 'Heat capacity';
@@ -89,7 +89,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 07)
 var.name              = 'Thermal conductivity minearls';
@@ -102,7 +102,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 08)
 var.name              = 'Thermal conductivity dry soils';
@@ -115,7 +115,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 09)
 var.name              = 'Organic matter';
@@ -128,7 +128,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 10)
 var.name              = 'Clay value';
@@ -141,7 +141,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 11)
 var.name              = 'Sand value';
@@ -154,7 +154,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 12)
 var.name              = 'Bulk density';
@@ -167,7 +167,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 % 
 % 13)
 var.name              = 'Volumetric soil water at field capacity';
@@ -180,7 +180,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 %
 % L2E at patch level
@@ -198,7 +198,7 @@ var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.patch_level{count} = var; clear var;
 
 %
 % E2L at column level
@@ -218,6 +218,6 @@ var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
 var.emi_constants_prefix = 'E2L_STATE';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

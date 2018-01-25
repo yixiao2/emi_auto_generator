@@ -22,7 +22,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = 'Aquifer recharge rate';
@@ -34,7 +34,7 @@ var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.emi_constants_prefix = 'L2E_FLUX';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 % 03)
 var.name              = 'Fractional impermeability';
@@ -46,7 +46,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 
 %
@@ -64,7 +64,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 % 02)
 var.name              = '';
@@ -76,7 +76,7 @@ var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.emi_constants_prefix = 'E2L_FLUX';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)

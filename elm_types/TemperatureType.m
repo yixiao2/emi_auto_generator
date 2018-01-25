@@ -23,7 +23,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 var.name              = 'Snow temperature';
 var.unit              = '[K]';
@@ -35,7 +35,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '-nlevsno + 1';
 var.dim2_end_name     = '0';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 var.name              = 'Standing water temperature';
 var.unit              = '[K]';
@@ -45,7 +45,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 var.name              = 'Soil temperature in top 10cm';
 var.unit              = '[K]';
@@ -55,7 +55,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 var.name              = 'Soil temperature in nlevsoi';
 var.unit              = '[K]';
@@ -67,7 +67,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevsoi';
-count=count+1;alm_type.pack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.column_level{count} = var; clear var;
 
 %
 % L2E at patch level
@@ -83,7 +83,7 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begp';
 var.dim1_end_name     = 'endp';
-count=count+1;alm_type.pack_vars_at_patch_level{count} = var; clear var;
+count=count+1;alm_type.pack_vars.patch_level{count} = var; clear var;
 
 %
 % E2L at column level
@@ -101,7 +101,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '1';
 var.dim2_end_name     = 'nlevgrnd';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 var.name              = 'Snow temperature';
 var.unit              = '[K]';
@@ -113,7 +113,7 @@ var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
 var.dim2_beg_name     = '-nlevsno + 1';
 var.dim2_end_name     = '0';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 var.name              = 'Standing water temperature';
 var.unit              = '[K]';
@@ -123,6 +123,6 @@ var.dimension         = 1;
 var.is_real           = true;
 var.dim1_beg_name     = 'begc';
 var.dim1_end_name     = 'endc';
-count=count+1;alm_type.unpack_vars_at_column_level{count} = var; clear var;
+count=count+1;alm_type.unpack_vars.column_level{count} = var; clear var;
 
 generate_EMI_ALMTtype_ExchangeMod_F90(alm_type,filename)
