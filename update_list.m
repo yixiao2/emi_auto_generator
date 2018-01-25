@@ -1,3 +1,9 @@
+% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% 
+% If 'value' is not included in the 'list', the 'value' is added otherwise
+% 'list' remains unchanged.
+% 
+% +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function list = update_list(list, value)
 
 count = length(list);
