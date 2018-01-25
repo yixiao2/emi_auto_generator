@@ -1,8 +1,5 @@
 function generate_Module_Definition(alm_data, fid)
 
-stages        = {'pack_vars','unpack_vars'};
-subgrid_level = {'column_level','patch_level','grid_level'};
-
 alm_mod_name  = alm_data.alm_mod_name;
 alm_type_name = alm_data.alm_type_name;
 
@@ -25,28 +22,8 @@ fprintf(fid, '  implicit none\n');
 fprintf(fid, '  !\n');
 fprintf(fid, '  !\n');
 
-
-for istage = 1:length(stages)
-    
-    if (isfield(alm_data,stages{istage}))
-        
-        stage_data = getfield(alm_data, stages{istage});
-        
-        for ilevel = 1:length(subgrid_level)
-            if (isfield(stage_data, subgrid_level{ilevel}))
-                
-                tmp = strsplit(stages{istage},'_');
-                stage_name = [upper(tmp{1}(1)) tmp{1}(2:end)];
-                
-                tmp = strsplit(subgrid_level{ilevel},'_');
-                level_name = [upper(tmp{1}(1)) tmp{1}(2:end) '_' upper(tmp{2}(1)) tmp{2}(2:end)];
-                
-                fprintf(fid, '  public :: EMI_%s_%s_at_%s_for_EM\n',stage_name,alm_mod_name,level_name);
-                
-            end
-        end
-    end
-end
+subroutine_defn = 1;
+generate_subroutine_defn_or_subroutine(alm_data, fid, subroutine_defn)
 
 fprintf(fid, '\n');
 fprintf(fid, 'contains\n');
