@@ -4,6 +4,7 @@
     <alm_mod_name>ChemStateType</alm_mod_name>
     <alm_var_name>ChemState</alm_var_name>
     <alm_type_name>chemstate_type</alm_type_name>
+    <constant_offset>1800</constant_offset>
 
     <pack_vars>
         <column_level>

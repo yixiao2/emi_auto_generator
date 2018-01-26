@@ -26,9 +26,9 @@ end
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !USES:\n');
 
-for vv = 1:length(constant_names)
-    fprintf(fid,'    use ExternalModelConstants , only : %s\n',constant_names{vv});
-end
+% for vv = 1:length(constant_names)
+%     fprintf(fid,'    use ExternalModelConstants , only : %s\n',constant_names{vv});
+% end
 fprintf(fid,'    use clm_varpar             , only : nlevsoi, nlevgrnd, nlevsno\n');
 fprintf(fid,'    !\n');
 fprintf(fid,'    implicit none\n');

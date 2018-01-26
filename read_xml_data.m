@@ -13,7 +13,7 @@ field_names = fieldnames(xml_data);
 new_data = '';
 
 for ii = 1:length(field_names)
-    if ~(strcmp(field_names{ii},'pack_vars') || strcmp(field_names{ii},'unpack_vars'))
+    if ~(strcmp(field_names{ii},'pack_vars') || strcmp(field_names{ii},'unpack_vars') )
         
         tmp = getfield(xml_data,field_names{ii});
         new_data =setfield(new_data,field_names{ii},tmp.Text);
@@ -72,14 +72,21 @@ for istage = 1:length(stages)
                 clear new_var_data;
                 
                 new_level_data = setfield(new_level_data,subgrid_level{ilevel},new_vars_data);
+                clear new_vars_data
                 
             end
         end
         
         if (~isempty(new_level_data))
             new_data = setfield(new_data,stages{istage},new_level_data);
+            clear new_level_data
         end
         
     end
     
 end
+
+constant_offset = str2num(new_data.constant_offset);
+rmfield(new_data,'constant_offset');
+new_data.constant_offset = constant_offset;
+

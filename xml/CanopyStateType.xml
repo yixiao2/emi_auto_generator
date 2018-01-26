@@ -4,6 +4,7 @@
     <alm_mod_name>CanopyStateType</alm_mod_name>
     <alm_var_name>CanopyState</alm_var_name>
     <alm_type_name>canopystate_type</alm_type_name>
+    <constant_offset>600</constant_offset>
 
     <pack_vars>
         <column_level>

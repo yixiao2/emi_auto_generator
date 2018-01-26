@@ -4,6 +4,7 @@
     <alm_mod_name>Atm2LndType</alm_mod_name>
     <alm_var_name>Atm2LndType</alm_var_name>
     <alm_type_name>atm2lnd_type</alm_type_name>
+    <constant_offset>900</constant_offset>
     
     <pack_vars>
         <grid_level>

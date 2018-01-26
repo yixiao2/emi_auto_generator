@@ -1,4 +1,4 @@
-function generate_Module_Definition(alm_data, fid)
+function generate_Module_Definition(alm_data, fid, constants_mods_to_include)
 
 alm_mod_name  = alm_data.alm_mod_name;
 alm_type_name = alm_data.alm_type_name;
@@ -17,6 +17,10 @@ fprintf(fid, '  use clm_varctl                            %s, only : iulog\n',bu
 fprintf(fid, '  use ExternalModelInterfaceDataMod         %s, only : emi_data_list, emi_data\n',buffer_1);
 fprintf(fid, '  use ExternalModelIntefaceDataDimensionMod %s, only : emi_data_dimension_list_type\n',buffer_1);
 fprintf(fid, '  use %s %s, only : %s\n', alm_mod_name,buffer_2,alm_type_name);
+
+for ii = 1:length(constants_mods_to_include)
+    fprintf(fid, '  use EMI_%s_Constants\n', constants_mods_to_include{ii});
+end
 fprintf(fid, '  !\n');
 fprintf(fid, '  implicit none\n');
 fprintf(fid, '  !\n');

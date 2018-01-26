@@ -1,4 +1,4 @@
-function generate_subroutine_defn_or_subroutine(alm_data, fid, subroutine_defn)
+function constant_names = generate_subroutine_defn_or_subroutine(alm_data, fid, subroutine_defn)
 
 stages        = {'pack_vars','unpack_vars'};
 stages_prefix = {'L2E', 'E2L'};
@@ -7,6 +7,8 @@ subgrid_level = {'column_level','patch_level','grid_level'};
 alm_mod_name  = alm_data.alm_mod_name;
 alm_var_name  = alm_data.alm_var_name;
 alm_type_name = alm_data.alm_type_name;
+
+count = 0;
 
 for istage = 1:length(stages)
     
@@ -24,7 +26,14 @@ for istage = 1:length(stages)
                 level_name = [upper(tmp{1}(1)) tmp{1}(2:end) '_' upper(tmp{2}(1)) tmp{2}(2:end)];
                 
                 if (subroutine_defn)
-                    fprintf(fid, '  public :: EMI_%s_%s_at_%s_for_EM\n',stage_name,alm_mod_name,level_name);
+                    switch stage_name
+                        case 'Pack'                            
+                            fprintf(fid, '  public :: EMI_%s_%s_at_%s_for_EM\n',stage_name,alm_mod_name,level_name);
+                        case 'Unpack'
+                            fprintf(fid, '  public :: EMI_%s_%s_at_%s_from_EM\n',stage_name,alm_mod_name,level_name);
+                        otherwise
+                            error('Unknown value for Pack_or_Unpack')
+                    end
                 else
                     
                     level_data = getfield(stage_data, subgrid_level{ilevel});
@@ -35,6 +44,13 @@ for istage = 1:length(stages)
                     Level_text_name      = level_name;
                     
                     generate_subroutine(fid, alm_mod_name, alm_var_name, alm_type_name, vars, emi_constants_prefix, Pack_Or_Unpack, Level_text_name);
+                    
+                    tmp_constant_names = compute_emi_constant_names(vars, emi_constants_prefix);
+                    
+                    for kk = 1:length(tmp_constant_names)
+                        count = count + 1;
+                        constant_names{count} = tmp_constant_names{kk};
+                    end
                 end
                 
             end
