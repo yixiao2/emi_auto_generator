@@ -14,6 +14,8 @@ elm_types = {
     'WaterStateType'
     };
 
+system('mkdir -p F90');
+
 for ivar = 1:length(elm_types)
     elm_type = elm_types{ivar};
     generate_EMI_ALMTtype_ExchangeMod_F90(['xml/' elm_type '.xml'],['F90/EMI_' elm_type '_ExchangeMod.F90']);
