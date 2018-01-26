@@ -1,12 +1,14 @@
-function generate_EMI_ALMTtype_ExchangeMod_F90(alm_data, filename)
+function generate_EMI_ALMTtype_ExchangeMod_F90(xml_filename, f90_filename)
 
 %
 % PreProcessing
 %
 
+alm_data = read_xml_data(xml_filename);
+
 alm_mod_name  = alm_data.alm_mod_name;
 
-fid = fopen(filename,'w');
+fid = fopen(f90_filename,'w');
 
 generate_Module_Definition(alm_data, fid);
 

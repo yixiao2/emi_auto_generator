@@ -1,14 +1,20 @@
 function emi_derivetype_auto_generator()
 
-addpath elm_types/
+addpath xml2struct
 
-Atm2LndType();
-CanopyStateType();
-ChemStateType();
-%ColumnType();
-EnergyFluxType();
-SoilHydrologyType();
-SoilStateType();
-TemperatureType();
-WaterFluxType();
-WaterStateType();
+elm_types = {
+    'Atm2LndType', ...
+    'CanopyStateType', ...
+    'ChemStateType', ...
+    'EnergyFluxType', ...
+    'SoilHydrologyType', ...
+    'SoilStateType', ...
+    'TemperatureType', ...
+    'WaterFluxType', ...
+    'WaterStateType'
+    };
+
+for ivar = 1:length(elm_types)
+    elm_type = elm_types{ivar};
+    generate_EMI_ALMTtype_ExchangeMod_F90(['xml/' elm_type '.xml'],['F90/EMI_' elm_type '_ExchangeMod.F90']);
+end
