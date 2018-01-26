@@ -1,0 +1,85 @@
+<elm_type>
+
+    <emi_constants_prefix>STATE</emi_constants_prefix>
+    <alm_mod_name>CanopyStateType</alm_mod_name>
+    <alm_var_name>CanopyState</alm_var_name>
+    <alm_type_name>canopystate_type</alm_type_name>
+
+    <pack_vars>
+        <column_level>
+            <name>Maximum annual depth of thaw</name>
+            <unit>[m]</unit>
+            <emi_constant_name>ALTMAX</emi_constant_name>
+            <alm_name>altmax_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+        <column_level>
+            <name>Prior year maximum annual depth of thaw</name>
+            <unit>[m]</unit>
+            <emi_constant_name>ALTMAX_LASTYEAR</emi_constant_name>
+            <alm_name>altmax_lastyear_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+
+        <patch_level>
+            <name>Laminar boundary layer resistance for water over dry leaf</name>
+            <unit>[s/m]</unit>
+            <emi_constant_name>LBL_RSC_H2O</emi_constant_name>
+            <alm_name>lbl_rsc_h2o_patch</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begp</dim1_beg_name>
+            <dim1_end_name>endp</dim1_end_name>
+        </patch_level>
+        <patch_level>
+            <name>Canopy one-sided leaf area index with burying by snow</name>
+            <unit>[-]</unit>
+            <emi_constant_name>ELAI</emi_constant_name>
+            <alm_name>elai_patch</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begp</dim1_beg_name>
+            <dim1_end_name>endp</dim1_end_name>
+        </patch_level>
+
+    </pack_vars>
+    <unpack_vars>
+        <patch_level>
+            <name>Sunlit fraction</name>
+            <unit>[-]</unit>
+            <emi_constant_name>FSUN</emi_constant_name>
+            <alm_name>fsun_patch</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begp</dim1_beg_name>
+            <dim1_end_name>endp</dim1_end_name>
+        </patch_level>
+        <patch_level>
+            <name>Sunlit projected leaf area index</name>
+            <unit>[-]</unit>
+            <emi_constant_name>LAISUN</emi_constant_name>
+            <alm_name>laisun_patch</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begp</dim1_beg_name>
+            <dim1_end_name>endp</dim1_end_name>
+        </patch_level>
+        <patch_level>
+            <name>Shaded projected leaf area index</name>
+            <unit>[]</unit>
+            <emi_constant_name>LAISHA</emi_constant_name>
+            <alm_name>laisha_patch</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begp</dim1_beg_name>
+            <dim1_end_name>endp</dim1_end_name>
+        </patch_level>
+
+    </unpack_vars>
+</elm_type>

@@ -1,0 +1,83 @@
+<elm_type>
+
+    <emi_constants_prefix>STATE</emi_constants_prefix>
+    <alm_mod_name>SoilHydrologyType</alm_mod_name>
+    <alm_var_name>SoilHydrology</alm_var_name>
+    <alm_type_name>soilhydrology_type</alm_type_name>
+
+    <pack_vars>
+        <column_level>
+            <name>Water table depth</name>
+            <unit>[m]</unit>
+            <emi_constant_name>WTD</emi_constant_name>
+            <alm_name>zwt_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+        <column_level>
+            <name>Aquifer recharge rate</name>
+            <unit>[mm/s]</unit>
+            <emi_constant_name>QCHARGE</emi_constant_name>
+            <alm_name>qcharge_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+            <emi_constants_prefix>L2E_FLUX</emi_constants_prefix>
+        </column_level>
+        <column_level>
+            <name>Fractional impermeability</name>
+            <unit>[-]</unit>
+            <alm_name>fracice_col</alm_name>
+            <dimension>2</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+            <dim2_beg_name>1</dim2_beg_name>
+            <dim2_end_name>nlevgrnd</dim2_end_name>
+        </column_level>
+        <column_level>
+            <emi_constant_name>H2OSFC_HEAT_FLUX</emi_constant_name>
+            <alm_name>eflx_hs_h2osfc_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+        <column_level>
+            <emi_constant_name>DERIVATIVE_OF_HEAT_FLUX</emi_constant_name>
+            <alm_name>eflx_dhsdT_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+
+    </pack_vars>
+    <unpack_vars>
+        <column_level>
+            <name>Water table depth</name>
+            <unit>[m]</unit>
+            <emi_constant_name>WTD</emi_constant_name>
+            <alm_name>zwt_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+        <column_level>
+            <name></name>
+            <unit>[]</unit>
+            <emi_constant_name>AQUIFER_RECHARGE</emi_constant_name>
+            <alm_name>qcharge_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+            <emi_constants_prefix>E2L_FLUX</emi_constants_prefix>
+        </column_level>
+
+    </unpack_vars>
+</elm_type>
