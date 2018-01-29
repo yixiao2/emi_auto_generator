@@ -9,6 +9,8 @@
     <pack_vars>
         <column_level>
             <emi_constant_name>ABSORBED_SOLAR_RADIATION</emi_constant_name>
+            <name>Absorbed solar radiation</name>
+            <unit>[Wm^{-2}]</unit>
             <alm_name>eflx_sabg_lyr_col</alm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
@@ -19,6 +21,8 @@
         </column_level>
         <column_level>
             <emi_constant_name>SOIL_HEAT_FLUX</emi_constant_name>
+            <name>Soil heat flux</name>
+            <unit>[Wm^{-2}]</unit>
             <alm_name>eflx_hs_soil_col</alm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
@@ -27,6 +31,8 @@
         </column_level>
         <column_level>
             <emi_constant_name>SNOW_HEAT_FLUX</emi_constant_name>
+            <name>Heat flux on snow</name>
+            <unit>[Wm^{-2}]</unit>
             <alm_name>eflx_hs_top_snow_col</alm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
@@ -35,6 +41,8 @@
         </column_level>
         <column_level>
             <emi_constant_name>H2OSFC_HEAT_FLUX</emi_constant_name>
+            <name>Heat flux on water</name>
+            <unit>[Wm^{-2}]</unit>
             <alm_name>eflx_hs_h2osfc_col</alm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
@@ -43,6 +51,8 @@
         </column_level>
         <column_level>
             <emi_constant_name>DERIVATIVE_OF_HEAT_FLUX</emi_constant_name>
+            <name>Derivative of heat flux</name>
+            <unit>[Wm^{-2}]</unit>
             <alm_name>eflx_dhsdT_col</alm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
