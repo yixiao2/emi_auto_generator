@@ -5,21 +5,21 @@ global stages stages_prefix subgrid_level
 alm_data = read_xml_data(xml_filename);
 fid = fopen(f90_filename,'w');
 
-alm_mod_name  = alm_data.alm_mod_name;
+elm_mod_name  = alm_data.elm_mod_name;
 
-fprintf(fid, 'module EMI_%s_DataMod\n', alm_mod_name);
+fprintf(fid, 'module EMI_%s_DataMod\n', elm_mod_name);
 fprintf(fid, '  !\n');
-fprintf(fid, '  use EMI_%s_Constants\n', alm_mod_name);
+fprintf(fid, '  use EMI_%s_Constants\n', elm_mod_name);
 fprintf(fid, '  !\n');
 fprintf(fid, '  implicit none\n');
 fprintf(fid, '  !\n');
-fprintf(fid, '  public :: EMI_%s_DataInfoByID\n', alm_mod_name);
+fprintf(fid, '  public :: EMI_%s_DataInfoByID\n', elm_mod_name);
 fprintf(fid, '\n');
 fprintf(fid, 'contains\n');
 fprintf(fid, '  \n');
 
 fprintf(fid,'!-----------------------------------------------------------------------\n');
-fprintf(fid,'  subroutine EMI_%s_DataInfoByID(data_id, id_val, name_val, long_name_val,&\n', alm_mod_name);
+fprintf(fid,'  subroutine EMI_%s_DataInfoByID(data_id, id_val, name_val, long_name_val,&\n', elm_mod_name);
 fprintf(fid,'        units_val, is_int_type, is_real_type, ndim, &\n');
 fprintf(fid,'        dim1_beg_name, dim1_end_name, dim2_beg_name, dim2_end_name, &\n');
 fprintf(fid,'        dim3_beg_name, dim3_end_name, dim4_beg_name, dim4_end_name, &\n');
@@ -153,8 +153,8 @@ end
 fprintf(fid, '    end select\n');
 fprintf(fid, '    \n');
 
-fprintf(fid,'  end subroutine EMI_%s_DataInfoByID\n', alm_mod_name);
+fprintf(fid,'  end subroutine EMI_%s_DataInfoByID\n', elm_mod_name);
 fprintf(fid,'    \n');
-fprintf(fid,'end module EMI_%s_DataMod\n', alm_mod_name);
+fprintf(fid,'end module EMI_%s_DataMod\n', elm_mod_name);
 
 fclose(fid);

@@ -1,9 +1,9 @@
 <elm_type>
 
     <emi_constants_prefix>STATE</emi_constants_prefix>
-    <alm_mod_name>WaterStateType</alm_mod_name>
-    <alm_var_name>WaterState</alm_var_name>
-    <alm_type_name>waterstate_type</alm_type_name>
+    <elm_mod_name>WaterStateType</elm_mod_name>
+    <elm_var_name>WaterState</elm_var_name>
+    <elm_type_name>waterstate_type</elm_type_name>
     <constant_offset>100</constant_offset>
 
     <pack_vars>
@@ -11,7 +11,7 @@
             <emi_constant_name>H2OSOI_LIQ_NLEVGRND</emi_constant_name>
             <name>soil liq water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_liq_col</alm_name>
+            <elm_name>h2osoi_liq_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -23,7 +23,7 @@
             <emi_constant_name>H2OSOI_ICE_NLEVGRND</emi_constant_name>
             <name>soil ice water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_ice_col</alm_name>
+            <elm_name>h2osoi_ice_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -35,7 +35,7 @@
             <emi_constant_name>VSFM_PROGNOSTIC_SOILP</emi_constant_name>
             <name>Soil pressure</name>
             <unit>[Pa]</unit>
-            <alm_name>soilp_col</alm_name>
+            <elm_name>soilp_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -44,7 +44,7 @@
             <dim2_end_name>nlevgrnd</dim2_end_name>
         </column_level>
         <column_level>
-            <alm_name>frac_h2osfc_col</alm_name>
+            <elm_name>frac_h2osfc_col</elm_name>
             <name>Fraction of standing water</name>
             <unit>[-]</unit>
             <dimension>1</dimension>
@@ -56,7 +56,7 @@
             <emi_constant_name>FRAC_INUNDATED</emi_constant_name>
             <name>Fraction inundated</name>
             <unit>[-]</unit>
-            <alm_name>finundated_col</alm_name>
+            <elm_name>finundated_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -66,7 +66,7 @@
             <emi_constant_name>H2OSOI_LIQ_VOL_NLEVSOI</emi_constant_name>
             <name>Vol sol liq water</name>
             <unit>[m3/m3]</unit>
-            <alm_name>h2osoi_liqvol_col</alm_name>
+            <elm_name>h2osoi_liqvol_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -78,7 +78,7 @@
             <emi_constant_name>H2OSOI_ICE_VOL_NLEVSOI</emi_constant_name>
             <name>Vol oil liq ice</name>
             <unit>[m3/m3]</unit>
-            <alm_name>h2osoi_icevol_col</alm_name>
+            <elm_name>h2osoi_icevol_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -90,7 +90,7 @@
             <emi_constant_name>H2OSOI_VOL_NLEVSOI</emi_constant_name>
             <name>Vol. soil liq water</name>
             <unit>[m3/m3]</unit>
-            <alm_name>h2osoi_vol_col</alm_name>
+            <elm_name>h2osoi_vol_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -102,7 +102,7 @@
             <emi_constant_name>AIR_VOL_NLEVSOI</emi_constant_name>
             <name>Air vol</name>
             <unit>[m3/m3]</unit>
-            <alm_name>air_vol_col</alm_name>
+            <elm_name>air_vol_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -114,7 +114,7 @@
             <emi_constant_name>RHO_VAP_NLEVSOI</emi_constant_name>
             <name>Water vapor pressure</name>
             <unit>[Pa]</unit>
-            <alm_name>rho_vap_col</alm_name>
+            <elm_name>rho_vap_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -126,7 +126,7 @@
             <emi_constant_name>RHVAP_SOI_NLEVSOI</emi_constant_name>
             <name>Relative humidity</name>
             <unit>[-]</unit>
-            <alm_name>rhvap_soi_col</alm_name>
+            <elm_name>rhvap_soi_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -138,7 +138,7 @@
             <emi_constant_name>SOIL_MATRIC_POTENTIAL_NLEVSOI</emi_constant_name>
             <name>Matric potential</name>
             <unit>[mm]</unit>
-            <alm_name>smp_l_col</alm_name>
+            <elm_name>smp_l_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -150,7 +150,7 @@
             <emi_constant_name>H2OSOI_LIQ_NLEVSOI</emi_constant_name>
             <name>Soil liquid water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_liq_col</alm_name>
+            <elm_name>h2osoi_liq_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -162,7 +162,7 @@
             <emi_constant_name>H2OSOI_ICE_NLEVSOI</emi_constant_name>
             <name>Soil ice water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_ice_col</alm_name>
+            <elm_name>h2osoi_ice_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -174,7 +174,7 @@
             <emi_constant_name>H2OSOI_LIQ_NLEVSNOW</emi_constant_name>
             <name>Soil liquid water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_liq_col</alm_name>
+            <elm_name>h2osoi_liq_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -186,7 +186,7 @@
             <emi_constant_name>H2OSOI_ICE_NLEVSNOW</emi_constant_name>
             <name>Soil ice water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_ice_col</alm_name>
+            <elm_name>h2osoi_ice_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -198,7 +198,7 @@
             <emi_constant_name>H2OSNOW</emi_constant_name>
             <name>Snow water</name>
             <unit>[mm]</unit>
-            <alm_name>h2osno_col</alm_name>
+            <elm_name>h2osno_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -207,7 +207,7 @@
             <dim2_end_name>0</dim2_end_name>
         </column_level>
         <column_level>
-            <alm_name>h2osfc_col</alm_name>
+            <elm_name>h2osfc_col</elm_name>
             <name>Standing surface water</name>
             <unit>[mm]</unit>
             <dimension>1</dimension>
@@ -219,7 +219,7 @@
             <emi_constant_name>FRAC_SNOW_EFFECTIVE</emi_constant_name>
             <name>Frac. of grnd covered with snow</name>
             <unit>[-]</unit>
-            <alm_name>frac_sno_eff_col</alm_name>
+            <elm_name>frac_sno_eff_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -229,7 +229,7 @@
     </pack_vars>
     <unpack_vars>
         <column_level>
-            <alm_name>h2osoi_liq_col</alm_name>
+            <elm_name>h2osoi_liq_col</elm_name>
             <name>Soil liquid water</name>
             <unit>[kg/m2]</unit>
             <dimension>2</dimension>
@@ -240,7 +240,7 @@
             <dim2_end_name>nlevgrnd</dim2_end_name>
         </column_level>
         <column_level>
-            <alm_name>h2osoi_ice_col</alm_name>
+            <elm_name>h2osoi_ice_col</elm_name>
             <name>Soil ice water</name>
             <unit>[kg/m2]</unit>
             <dimension>2</dimension>
@@ -254,7 +254,7 @@
             <emi_constant_name>VSFM_PROGNOSTIC_SOILP</emi_constant_name>
             <name>Soil matric pressure</name>
             <unit>[Pa]</unit>
-            <alm_name>soilp_col</alm_name>
+            <elm_name>soilp_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>

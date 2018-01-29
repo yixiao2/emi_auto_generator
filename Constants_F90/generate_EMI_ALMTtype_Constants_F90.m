@@ -2,7 +2,7 @@ function generate_EMI_ALMTtype_Constants_F90(xml_filename, constant_names, const
 
 alm_data = read_xml_data(xml_filename);
 
-alm_mod_name  = alm_data.alm_mod_name;
+elm_mod_name  = alm_data.elm_mod_name;
 alm_constant_offset = alm_data.constant_offset;
 
 % Determine unique variable names for the constants
@@ -50,7 +50,7 @@ constant_names = ordered_constant_names;
 
 fid = fopen(constants_f90_filename,'w');
 
-fprintf(fid, 'module EMI_%s_Constants\n', alm_mod_name);
+fprintf(fid, 'module EMI_%s_Constants\n', elm_mod_name);
 fprintf(fid, '  !\n');
 
 max_name_len = 0;
@@ -95,6 +95,6 @@ for ii = 1:length(constant_names)
 end
 fprintf(fid, '\n');
 
-fprintf(fid, 'end module EMI_%s_Constants\n', alm_mod_name);
+fprintf(fid, 'end module EMI_%s_Constants\n', elm_mod_name);
 
 fclose(fid);

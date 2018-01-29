@@ -1,4 +1,4 @@
-function emi_derivetype_auto_generator()
+function emi_auto_generator()
 
 addpath utils
 addpath utils/xml2struct
