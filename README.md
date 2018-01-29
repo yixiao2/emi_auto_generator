@@ -7,16 +7,25 @@ various derived type of ELM.
 
 ## Description
 
-
+Input: XML file that describes that variables that will exchanges between ELM's derived type and EM.
+Output: Following Fortran code:
+1. `F90/EMI_<derivedtypename>_Constants.F90`
+2. `F90/EMI_<derivedtypename>_DataMod.F90`
+3. `F90/EMI_<derivedtypename>_ExchangeMod.F90`
 
 ## Terminology of EMI
 
-1. Data from any ELM's derived type (e.g. `WaterStateType`) can exchanged with any EM.
+1. Data from any ELM's derived type (e.g. `waterstate_type`) can exchanged with any EM.
+
 2. An XML file describes the ELM derived type.
-   2.1. `elm_mod_name` : Module name
-   2.2. `elm_mod_name` : Module name
-   2.3. `elm_mod_name` : Module name
-   2.4. `elm_mod_name` : Module name
+
+   2.1. `elm_mod_name` : Name of the module (e.g. `WaterStateType` in `WaterStateType.F90'
+   
+   2.2. `elm_var_name` : Name of the instant definied in `clm_instMod.F90` (e.g. `waterstate_vars`) [CHANGE THE CODE]
+   
+   2.3. `elm_type_name` : Name of ELM derived type
+   
+   2.4. `constant_offset` : An integer offset for creating global constant of variables that will be exchanged.
 
 
 
