@@ -252,16 +252,6 @@
     </pack_vars>
     <unpack_vars>
         <column_level>
-            <name>Aquifer recharge rate</name>
-            <unit>[mm/s]</unit>
-            <emi_constant_name>AQUIFER_RECHARGE</emi_constant_name>
-            <alm_name>mflx_recharge_col</alm_name>
-            <dimension>1</dimension>
-            <is_real>1</is_real>
-            <dim1_beg_name>begc</dim1_beg_name>
-            <dim1_end_name>endc</dim1_end_name>
-        </column_level>
-        <column_level>
             <name>Snow layer disappearance sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>SNOW_LYR_DISAPPERANCE_MASS_FLUX</emi_constant_name>

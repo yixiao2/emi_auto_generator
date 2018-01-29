@@ -18,15 +18,14 @@
             <dim1_end_name>endc</dim1_end_name>
         </column_level>
         <column_level>
-            <name>Aquifer recharge rate</name>
+            <name>Flux recharge rate</name>
             <unit>[mm/s]</unit>
             <emi_constant_name>QCHARGE</emi_constant_name>
-            <alm_name>qcharge_col</alm_name>
+            <alm_name>qflx_bot_col</alm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
             <dim1_end_name>endc</dim1_end_name>
-            <emi_constants_prefix>L2E_FLUX</emi_constants_prefix>
         </column_level>
         <column_level>
             <name>Fractional impermeability</name>
@@ -50,6 +49,17 @@
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
             <dim1_end_name>endc</dim1_end_name>
+        </column_level>
+        <column_level>
+            <name>Aquifer recharge rate</name>
+            <unit>[mm/s]</unit>
+            <emi_constant_name>AQUIFER_RECHARGE</emi_constant_name>
+            <alm_name>qcharge_col</alm_name>
+            <dimension>1</dimension>
+            <is_real>1</is_real>
+            <dim1_beg_name>begc</dim1_beg_name>
+            <dim1_end_name>endc</dim1_end_name>
+            <emi_constants_prefix>E2L_FLUX</emi_constants_prefix>
         </column_level>
 
     </unpack_vars>
