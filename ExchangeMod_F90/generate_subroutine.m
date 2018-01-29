@@ -1,4 +1,4 @@
-function generate_subroutine(fid, alm_mod_name, alm_var_name, alm_type_name, vars, emi_constants_prefix, Pack_Or_Unpack, Level_text_name)
+function generate_subroutine(fid, elm_mod_name, elm_var_name, elm_type_name, vars, emi_constants_prefix, Pack_Or_Unpack, Level_text_name)
 
 constant_names      = compute_emi_constant_names(vars,emi_constants_prefix);
 [associate_var_names, associate_var_names_buffers] = compute_associate_var_names(vars);
@@ -6,20 +6,20 @@ constant_names      = compute_emi_constant_names(vars,emi_constants_prefix);
 fprintf(fid,'!-----------------------------------------------------------------------\n');
 switch Pack_Or_Unpack
     case 'Pack'
-        fprintf(fid,'  subroutine EMI_%s_%s_at_%s_for_EM(data_list, em_stage, &\n',Pack_Or_Unpack, alm_mod_name, Level_text_name);
+        fprintf(fid,'  subroutine EMI_%s_%s_at_%s_for_EM(data_list, em_stage, &\n',Pack_Or_Unpack, elm_mod_name, Level_text_name);
     case 'Unpack'
-        fprintf(fid,'  subroutine EMI_%s_%s_at_%s_from_EM(data_list, em_stage, &\n',Pack_Or_Unpack, alm_mod_name, Level_text_name);
+        fprintf(fid,'  subroutine EMI_%s_%s_at_%s_from_EM(data_list, em_stage, &\n',Pack_Or_Unpack, elm_mod_name, Level_text_name);
     otherwise
         error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
 end
-fprintf(fid,'        num_filter, filter, %s_vars)\n', lower(alm_var_name));
+fprintf(fid,'        num_filter, filter, %s)\n', lower(elm_var_name));
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !DESCRIPTION:\n');
 switch Pack_Or_Unpack
     case 'Pack'
-        fprintf(fid,'    ! Pack data from ALM %s_vars for EM\n',lower(alm_var_name));
+        fprintf(fid,'    ! Pack data from ALM %s for EM\n',lower(elm_var_name));
     case 'Unpack'
-        fprintf(fid,'    ! Unack data for ALM %s_vars from EM\n',lower(alm_var_name));
+        fprintf(fid,'    ! Unpack data for ALM %s from EM\n',lower(elm_var_name));
     otherwise
         error(['Unknown Pack_or_Unpack stage: ' Pack_Or_Unpack]);
 end
@@ -35,12 +35,12 @@ fprintf(fid,'    implicit none\n');
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !ARGUMENTS:\n');
 
-[buffer_1, buffer_2] = compute_buffer('    class(emi_data_list)   ,',sprintf('    type(%s) ,', alm_type_name));
+[buffer_1, buffer_2] = compute_buffer('    class(emi_data_list)   ,',sprintf('    type(%s) ,', elm_type_name));
 fprintf(fid,'    class(emi_data_list)   %s, intent(in) :: data_list\n',buffer_1);
 fprintf(fid,'    integer                %s, intent(in) :: em_stage\n',buffer_1);
 fprintf(fid,'    integer                %s, intent(in) :: num_filter\n',buffer_1);
 fprintf(fid,'    integer                %s, intent(in) :: filter(:)\n',buffer_1);
-fprintf(fid,'    type(%s) %s, intent(in) :: %s_vars\n',alm_type_name, buffer_2, lower(alm_var_name));
+fprintf(fid,'    type(%s) %s, intent(in) :: %s\n',elm_type_name, buffer_2, lower(elm_var_name));
 
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !LOCAL_VARIABLES:\n');
@@ -65,11 +65,11 @@ fprintf(fid,'\n');
 fprintf(fid,'    associate(& \n');
 for vv = 1:length(associate_var_names)-1
     tmp = findstr(associate_var_names{vv},'_');
-    fprintf(fid,'         %s %s=> %s_vars%s%s %s, &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(alm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
+    fprintf(fid,'         %s %s=> %s%s%s %s, &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(elm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
 end
 vv = length(associate_var_names);
 tmp = findstr(associate_var_names{vv},'_');
-fprintf(fid,'         %s %s=> %s_vars%s%s %s  &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(alm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
+fprintf(fid,'         %s %s=> %s%s%s %s  &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(elm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
 fprintf(fid,'         )\n');
 fprintf(fid,'\n');
 
@@ -95,7 +95,7 @@ fprintf(fid,'\n');
 
 for vv = 1:length(vars)
     emi_constant_name = compute_emi_constant_name(vars{vv},emi_constants_prefix);
-    tmp = findstr(vars{vv}.alm_name,'_');
+    tmp = findstr(vars{vv}.elm_name,'_');
     
     switch vars{vv}.dimension
         case 1
@@ -105,15 +105,15 @@ for vv = 1:length(vars)
             switch Pack_Or_Unpack
                 case 'Pack'
                     if (vars{vv}.is_real)
-                        fprintf(fid,'                cur_data%sdata_real_1d(%s) = %s(%s)\n', char(37),local_level_variable_name,vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name);
+                        fprintf(fid,'                cur_data%sdata_real_1d(%s) = %s(%s)\n', char(37),local_level_variable_name,vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name);
                     else
-                        fprintf(fid,'                cur_data%sdata_int_1d(%s) = %s(%s)\n', char(37),local_level_variable_name,vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name);
+                        fprintf(fid,'                cur_data%sdata_int_1d(%s) = %s(%s)\n', char(37),local_level_variable_name,vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name);
                     end
                 case 'Unpack'
                     if (vars{vv}.is_real)
-                        fprintf(fid,'                %s(%s) = cur_data%sdata_real_1d(%s)\n', vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
+                        fprintf(fid,'                %s(%s) = cur_data%sdata_real_1d(%s)\n', vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
                     else
-                        fprintf(fid,'                %s(%s) = cur_data%sdata_int_1d(%s)\n',vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
+                        fprintf(fid,'                %s(%s) = cur_data%sdata_int_1d(%s)\n',vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
                     end
                 otherwise
                     error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
@@ -130,15 +130,15 @@ for vv = 1:length(vars)
             switch Pack_Or_Unpack
                 case 'Pack'
                     if (vars{vv}.is_real)
-                        fprintf(fid,'                   cur_data%sdata_real_2d(%s,j) = %s(%s,j)\n', char(37),local_level_variable_name,vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name);
+                        fprintf(fid,'                   cur_data%sdata_real_2d(%s,j) = %s(%s,j)\n', char(37),local_level_variable_name,vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name);
                     else
-                        fprintf(fid,'                   cur_data%sdata_int_2d(%s,j) = %s(%s,j)\n', char(37),local_level_variable_name,vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name);
+                        fprintf(fid,'                   cur_data%sdata_int_2d(%s,j) = %s(%s,j)\n', char(37),local_level_variable_name,vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name);
                     end
                 case 'Unpack'
                     if (vars{vv}.is_real)
-                        fprintf(fid,'                   %s(%s,j) = cur_data%sdata_real_2d(%s,j)\n',vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
+                        fprintf(fid,'                   %s(%s,j) = cur_data%sdata_real_2d(%s,j)\n',vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
                     else
-                        fprintf(fid,'                   %s(%s,j) = cur_data%sdata_int_2d(%s,j)\n',vars{vv}.alm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
+                        fprintf(fid,'                   %s(%s,j) = cur_data%sdata_int_2d(%s,j)\n',vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
                     end
                 otherwise
                     error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
@@ -163,9 +163,9 @@ fprintf(fid,'    end associate\n');
 fprintf(fid,'\n');
 switch Pack_Or_Unpack
     case 'Pack'
-        fprintf(fid,'  end subroutine EMI_%s_%s_at_%s_for_EM\n',Pack_Or_Unpack, alm_mod_name, Level_text_name);
+        fprintf(fid,'  end subroutine EMI_%s_%s_at_%s_for_EM\n',Pack_Or_Unpack, elm_mod_name, Level_text_name);
     case 'Unpack'
-        fprintf(fid,'  end subroutine EMI_%s_%s_at_%s_from_EM\n',Pack_Or_Unpack, alm_mod_name, Level_text_name);
+        fprintf(fid,'  end subroutine EMI_%s_%s_at_%s_from_EM\n',Pack_Or_Unpack, elm_mod_name, Level_text_name);
     otherwise
         error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
 end

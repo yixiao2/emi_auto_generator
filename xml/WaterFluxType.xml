@@ -1,9 +1,9 @@
 <elm_type>
 
     <emi_constants_prefix>FLUX</emi_constants_prefix>
-    <alm_mod_name>WaterFluxType</alm_mod_name>
-    <alm_var_name>WaterFlux</alm_var_name>
-    <alm_type_name>waterflux_type</alm_type_name>
+    <elm_mod_name>WaterFluxType</elm_mod_name>
+    <elm_var_name>WaterFlux_vars</elm_var_name>
+    <elm_type_name>waterflux_type</elm_type_name>
     <constant_offset>800</constant_offset>
 
     <pack_vars>
@@ -11,7 +11,7 @@
             <name>Soil infiltration source</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>INFIL_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_infl_col</alm_name>
+            <elm_name>mflx_infl_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -21,7 +21,7 @@
             <name>Evapotranspiration sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>VERTICAL_ET_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_et_col</alm_name>
+            <elm_name>mflx_et_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -33,7 +33,7 @@
             <name>Dew sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>DEW_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_dew_col</alm_name>
+            <elm_name>mflx_dew_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -43,7 +43,7 @@
             <name>Snow layer disappearance sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>SNOW_SUBLIMATION_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_sub_snow_col</alm_name>
+            <elm_name>mflx_sub_snow_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -53,7 +53,7 @@
             <name>Snow layer disappearance sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>SNOW_LYR_DISAPPERANCE_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_snowlyr_disp_col</alm_name>
+            <elm_name>mflx_snowlyr_disp_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -63,7 +63,7 @@
             <name>Snow layer disappearance sink needed at restart</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>RESTART_SNOW_LYR_DISAPPERANCE_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_snowlyr_col</alm_name>
+            <elm_name>mflx_snowlyr_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -73,7 +73,7 @@
             <name>Drainage sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>DRAINAGE_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_drain_col</alm_name>
+            <elm_name>mflx_drain_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -85,7 +85,7 @@
             <name>Infiltration</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>INFL</emi_constant_name>
-            <alm_name>qflx_infl_col</alm_name>
+            <elm_name>qflx_infl_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -95,7 +95,7 @@
             <name>Drainage sink</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>TOTDRAIN</emi_constant_name>
-            <alm_name>qflx_totdrain_col</alm_name>
+            <elm_name>qflx_totdrain_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -105,7 +105,7 @@
             <name>Gross evaporation from soil</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>GROSS_EVAP_SOIL</emi_constant_name>
-            <alm_name>qflx_gross_evap_soil_col</alm_name>
+            <elm_name>qflx_gross_evap_soil_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -115,7 +115,7 @@
             <name>Gross evaporation infiltration</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>GROSS_INFL_SOIL</emi_constant_name>
-            <alm_name>qflx_gross_infl_soil_col</alm_name>
+            <elm_name>qflx_gross_infl_soil_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -125,7 +125,7 @@
             <name>Surface runoff</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>SURF</emi_constant_name>
-            <alm_name>qflx_surf_col</alm_name>
+            <elm_name>qflx_surf_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -135,7 +135,7 @@
             <name>Surface dew added to ground</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>DEW_GRND</emi_constant_name>
-            <alm_name>qflx_dew_grnd_col</alm_name>
+            <elm_name>qflx_dew_grnd_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -145,7 +145,7 @@
             <name>Surface dew added to snow pacK</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>DEW_SNOW</emi_constant_name>
-            <alm_name>qflx_dew_snow_col</alm_name>
+            <elm_name>qflx_dew_snow_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -155,7 +155,7 @@
             <name>Sublimation vol from snow pack</name>
             <unit>[mm H2O]</unit>
             <emi_constant_name>SUB_SNOW_VOL</emi_constant_name>
-            <alm_name>qflx_h2osfc2topsoi_col</alm_name>
+            <elm_name>qflx_h2osfc2topsoi_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -165,7 +165,7 @@
             <name>sublimation rate from snow pack</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>SUB_SNOW</emi_constant_name>
-            <alm_name>qflx_sub_snow_col</alm_name>
+            <elm_name>qflx_sub_snow_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -175,7 +175,7 @@
             <name>Rate of surface standing water entering top soil</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>H2OSFC2TOPSOI</emi_constant_name>
-            <alm_name>qflx_h2osfc2topsoi_col</alm_name>
+            <elm_name>qflx_h2osfc2topsoi_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -185,7 +185,7 @@
             <name>Rate of snow entering top soil</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>SNOW2TOPSOI</emi_constant_name>
-            <alm_name>qflx_snow2topsoi_col</alm_name>
+            <elm_name>qflx_snow2topsoi_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -195,7 +195,7 @@
             <name>Root and soil water exchange</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>ROOTSOI</emi_constant_name>
-            <alm_name>qflx_rootsoi_col</alm_name>
+            <elm_name>qflx_rootsoi_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -207,7 +207,7 @@
             <name>Advective flux across different soil layer interfaces</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>ADV</emi_constant_name>
-            <alm_name>qflx_adv_col</alm_name>
+            <elm_name>qflx_adv_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -219,7 +219,7 @@
             <name>liquid water losted as drainage</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>DRAIN_VR</emi_constant_name>
-            <alm_name>qflx_drain_vr_col</alm_name>
+            <elm_name>qflx_drain_vr_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -231,7 +231,7 @@
             <name>vegetation transpiration</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>TRAN_VEG</emi_constant_name>
-            <alm_name>qflx_tran_veg_col</alm_name>
+            <elm_name>qflx_tran_veg_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -241,7 +241,7 @@
             <name>Root soil fraction</name>
             <unit>[mm H2O/s]</unit>
             <emi_constant_name>ROOTSOI_FRAC</emi_constant_name>
-            <alm_name>qflx_rootsoi_frac_patch</alm_name>
+            <elm_name>qflx_rootsoi_frac_patch</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begp</dim1_beg_name>
@@ -255,7 +255,7 @@
             <name>Snow layer disappearance sink</name>
             <unit>[kg/s]</unit>
             <emi_constant_name>SNOW_LYR_DISAPPERANCE_MASS_FLUX</emi_constant_name>
-            <alm_name>mflx_snowlyr_col</alm_name>
+            <elm_name>mflx_snowlyr_col</elm_name>
             <dimension>1</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>

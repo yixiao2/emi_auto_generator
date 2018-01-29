@@ -2,7 +2,7 @@ function [var_names, buffers] = compute_associate_var_names(vars)
 
 var_names = '';
 for vv = 1:length(vars)  
-    var_names = update_list(var_names, vars{vv}.alm_name);    
+    var_names = update_list(var_names, vars{vv}.elm_name);    
 end
 
 var_name_max_length = 0;
