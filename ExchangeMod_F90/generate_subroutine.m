@@ -19,7 +19,7 @@ switch Pack_Or_Unpack
     case 'Pack'
         fprintf(fid,'    ! Pack data from ALM %s_vars for EM\n',lower(elm_var_name));
     case 'Unpack'
-        fprintf(fid,'    ! Unack data for ALM %s_vars from EM\n',lower(elm_var_name));
+        fprintf(fid,'    ! Unpack data for ALM %s_vars from EM\n',lower(elm_var_name));
     otherwise
         error(['Unknown Pack_or_Unpack stage: ' Pack_Or_Unpack]);
 end
