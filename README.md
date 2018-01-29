@@ -36,9 +36,9 @@ Output: For each `derived-type`, following Fortran codes are generated:
 
 1. Global attributes:
 
-   1.1. `elm_mod_name` : Name of the module (e.g. `WaterStateType` in `WaterStateType.F90')
+   1.1. `elm_mod_name` : Name of the module (e.g. `WaterStateType` in `WaterStateType.F90`)
    
-   1.2. `elm_var_name` : Name of the instant definied in `clm_instMod.F90` (e.g. `waterstate_vars`) [CHANGE THE CODE]
+   1.2. `elm_var_name` : Name of the instant definied in `clm_instMod.F90` (e.g. `waterstate_vars`)
    
    1.3. `elm_type_name` : Name of ELM derived type
    
