@@ -1,11 +1,9 @@
-function generate_DataInfoByID_subroutine(xml_filename, f90_filename)
+function generate_EMI_ALMTtype_DataMod_F90(xml_filename, f90_filename)
+
+global stages stages_prefix subgrid_level
 
 alm_data = read_xml_data(xml_filename);
 fid = fopen(f90_filename,'w');
-
-stages        = {'pack_vars','unpack_vars'};
-stages_prefix = {'L2E', 'E2L'};
-subgrid_level = {'column_level','patch_level','grid_level'};
 
 alm_mod_name  = alm_data.alm_mod_name;
 

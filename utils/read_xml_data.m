@@ -1,8 +1,6 @@
 function new_data = read_xml_data(xml_filename)
 
-stages        = {'pack_vars','unpack_vars'};
-subgrid_level = {'column_level','patch_level','grid_level'};
-
+global stages stages_prefix subgrid_level
 
 xml_data = xml2struct(xml_filename);
 
