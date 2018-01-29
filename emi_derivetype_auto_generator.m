@@ -1,7 +1,7 @@
 function emi_derivetype_auto_generator()
 
-addpath xml2struct
 addpath utils
+addpath utils/xml2struct
 addpath Constants_F90
 addpath DataMod_F90
 addpath ExchangeMod_F90
