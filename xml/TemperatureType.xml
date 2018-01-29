@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>STATE</emi_constants_prefix>
     <elm_mod_name>TemperatureType</elm_mod_name>
-    <elm_var_name>Temperature</elm_var_name>
+    <elm_var_name>Temperature_vars</elm_var_name>
     <elm_type_name>temperature_type</elm_type_name>
     <constant_offset>0</constant_offset>
 

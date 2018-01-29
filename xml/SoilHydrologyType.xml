@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>STATE</emi_constants_prefix>
     <elm_mod_name>SoilHydrologyType</elm_mod_name>
-    <elm_var_name>SoilHydrology</elm_var_name>
+    <elm_var_name>SoilHydrology_vars</elm_var_name>
     <elm_type_name>soilhydrology_type</elm_type_name>
     <constant_offset>200</constant_offset>
 

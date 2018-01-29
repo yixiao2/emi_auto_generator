@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>STATE</emi_constants_prefix>
     <elm_mod_name>CanopyStateType</elm_mod_name>
-    <elm_var_name>CanopyState</elm_var_name>
+    <elm_var_name>CanopyState_vars</elm_var_name>
     <elm_type_name>canopystate_type</elm_type_name>
     <constant_offset>600</constant_offset>
 

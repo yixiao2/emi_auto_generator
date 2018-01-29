@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>PARAMETER</emi_constants_prefix>
     <elm_mod_name>SoilStateType</elm_mod_name>
-    <elm_var_name>SoilState</elm_var_name>
+    <elm_var_name>SoilState_vars</elm_var_name>
     <elm_type_name>soilstate_type</elm_type_name>
     <constant_offset>1500</constant_offset>
 

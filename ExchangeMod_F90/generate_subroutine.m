@@ -12,14 +12,14 @@ switch Pack_Or_Unpack
     otherwise
         error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
 end
-fprintf(fid,'        num_filter, filter, %s_vars)\n', lower(elm_var_name));
+fprintf(fid,'        num_filter, filter, %s)\n', lower(elm_var_name));
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !DESCRIPTION:\n');
 switch Pack_Or_Unpack
     case 'Pack'
-        fprintf(fid,'    ! Pack data from ALM %s_vars for EM\n',lower(elm_var_name));
+        fprintf(fid,'    ! Pack data from ALM %s for EM\n',lower(elm_var_name));
     case 'Unpack'
-        fprintf(fid,'    ! Unpack data for ALM %s_vars from EM\n',lower(elm_var_name));
+        fprintf(fid,'    ! Unpack data for ALM %s from EM\n',lower(elm_var_name));
     otherwise
         error(['Unknown Pack_or_Unpack stage: ' Pack_Or_Unpack]);
 end
@@ -40,7 +40,7 @@ fprintf(fid,'    class(emi_data_list)   %s, intent(in) :: data_list\n',buffer_1)
 fprintf(fid,'    integer                %s, intent(in) :: em_stage\n',buffer_1);
 fprintf(fid,'    integer                %s, intent(in) :: num_filter\n',buffer_1);
 fprintf(fid,'    integer                %s, intent(in) :: filter(:)\n',buffer_1);
-fprintf(fid,'    type(%s) %s, intent(in) :: %s_vars\n',elm_type_name, buffer_2, lower(elm_var_name));
+fprintf(fid,'    type(%s) %s, intent(in) :: %s\n',elm_type_name, buffer_2, lower(elm_var_name));
 
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !LOCAL_VARIABLES:\n');
@@ -65,11 +65,11 @@ fprintf(fid,'\n');
 fprintf(fid,'    associate(& \n');
 for vv = 1:length(associate_var_names)-1
     tmp = findstr(associate_var_names{vv},'_');
-    fprintf(fid,'         %s %s=> %s_vars%s%s %s, &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(elm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
+    fprintf(fid,'         %s %s=> %s%s%s %s, &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(elm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
 end
 vv = length(associate_var_names);
 tmp = findstr(associate_var_names{vv},'_');
-fprintf(fid,'         %s %s=> %s_vars%s%s %s  &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(elm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
+fprintf(fid,'         %s %s=> %s%s%s %s  &\n', associate_var_names{vv}(1:tmp(end)-1), associate_var_names_buffers{vv},  lower(elm_var_name), char(37), associate_var_names{vv}, associate_var_names_buffers{vv});
 fprintf(fid,'         )\n');
 fprintf(fid,'\n');
 

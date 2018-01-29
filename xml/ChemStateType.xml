@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>STATE</emi_constants_prefix>
     <elm_mod_name>ChemStateType</elm_mod_name>
-    <elm_var_name>ChemState</elm_var_name>
+    <elm_var_name>ChemState_vars</elm_var_name>
     <elm_type_name>chemstate_type</elm_type_name>
     <constant_offset>1800</constant_offset>
 

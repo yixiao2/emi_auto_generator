@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>FLUX</emi_constants_prefix>
     <elm_mod_name>EnergyFluxType</elm_mod_name>
-    <elm_var_name>EnergyFlux</elm_var_name>
+    <elm_var_name>EnergyFlux_vars</elm_var_name>
     <elm_type_name>energyflux_type</elm_type_name>
     <constant_offset>1000</constant_offset>
 

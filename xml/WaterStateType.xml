@@ -2,7 +2,7 @@
 
     <emi_constants_prefix>STATE</emi_constants_prefix>
     <elm_mod_name>WaterStateType</elm_mod_name>
-    <elm_var_name>WaterState</elm_var_name>
+    <elm_var_name>WaterState_vars</elm_var_name>
     <elm_type_name>waterstate_type</elm_type_name>
     <constant_offset>100</constant_offset>
 
