@@ -81,16 +81,16 @@ Output: For each `derived-type`, following Fortran codes are generated:
 ```
 <elm_type>
     <emi_constants_prefix>STATE</emi_constants_prefix>
-    <alm_mod_name>WaterStateType</alm_mod_name>
-    <alm_var_name>WaterState</alm_var_name>
-    <alm_type_name>waterstate_type</alm_type_name>
+    <elm_mod_name>WaterStateType</elm_mod_name>
+    <elm_var_name>WaterState</elm_var_name>
+    <elm_type_name>waterstate_type</elm_type_name>
     <constant_offset>100</constant_offset>
     <pack_vars>
         <column_level>
             <emi_constant_name>H2OSOI_LIQ_NLEVGRND</emi_constant_name>
             <name>soil liq water</name>
             <unit>[kg/m2]</unit>
-            <alm_name>h2osoi_liq_col</alm_name>
+            <elm_name>h2osoi_liq_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -104,7 +104,7 @@ Output: For each `derived-type`, following Fortran codes are generated:
             <emi_constant_name>VSFM_PROGNOSTIC_SOILP</emi_constant_name>
             <name>Soil matric pressure</name>
             <unit>[Pa]</unit>
-            <alm_name>soilp_col</alm_name>
+            <elm_name>soilp_col</elm_name>
             <dimension>2</dimension>
             <is_real>1</is_real>
             <dim1_beg_name>begc</dim1_beg_name>
@@ -128,7 +128,7 @@ module EMI_WaterStateType_Constants
 
   integer, parameter, public :: E2L_STATE_VSFM_PROGNOSTIC_SOILP  = 0102
 
-end module EMI_WaterStateType_Constants 
+end module EMI_WaterStateType_Constants
 ```
 
 #### Example of `EMI_WaterStateType_DataMod.F90`
@@ -240,6 +240,9 @@ module EMI_WaterStateType_ExchangeMod
   use EMI_Filter_Constants
   use EMI_ColumnType_Constants
   use EMI_Landunit_Constants
+  use EMI_Filter_Constants
+  use EMI_ColumnType_Constants
+  use EMI_Landunit_Constants
   !
   implicit none
   !
@@ -322,7 +325,7 @@ contains
         num_filter, filter, waterstate_vars)
     !
     ! !DESCRIPTION:
-    ! Unack data for ALM waterstate_vars from EM
+    ! Unpack data for ALM waterstate_vars from EM
     !
     ! !USES:
     use clm_varpar             , only : nlevsoi, nlevgrnd, nlevsno
