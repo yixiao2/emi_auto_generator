@@ -83,6 +83,7 @@ total 376
 -rw-r--r--  1 gbisht  staff  11461 Feb 23 03:48 EMI_WaterStateType_ExchangeMod.F90
 ```
 
+5. Copy the auto-generated Fortran code in E3SM's `components/clm/src/external_models/emi/src/elm_types` directory.
 
 
 
