@@ -1,8 +1,12 @@
 # EMI Autocode Generator
-External Model Interface (EMI) is for coupling the ELM (E3SM Land Model) 
+External Model Interface (EMI) is for coupling the E3SM Land Model (ELM) 
 with external models (EMs) such as SBeTR, VSFM, FATES, PFLOTRAN, etc.
-These MATLAB scripts generate Fortran codes to exchange data from
+The MATLAB scripts in this repository generate Fortran codes to exchange data from
 various derived type of ELM.
+
+
+![alt text](emi.png "EMI")
+
 
 
 ## Running the code
