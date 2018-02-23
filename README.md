@@ -1,8 +1,94 @@
 # EMI Autocode Generator
-External Model Interface (EMI) is for coupling the ELM (E3SM Land Model) 
+External Model Interface (EMI) is for coupling the E3SM Land Model (ELM) 
 with external models (EMs) such as SBeTR, VSFM, FATES, PFLOTRAN, etc.
-These MATLAB script generate the Fortran code to exchange data from
+The MATLAB scripts in this repository generate Fortran codes to exchange data from
 various derived type of ELM.
+
+
+![alt text](emi.png "EMI")
+
+
+
+## Running the code
+
+1. Download the code
+
+```
+git clone https://github.com/bishtgautam/emi_auto_generator
+cd emi_auto_generator
+```
+
+2. Launch MALTAB and change directory to the top level EMI Autocode
+Generator directory.
+
+```matlab
+<MATLAB_INSTALLATION_DIR>/bin/matlab -nodesktop
+
+cd <emi_auto_generator>
+
+>>ls -l
+total 40
+drwxr-xr-x   3 gbisht  staff    102 Jan 29 14:24 Constants_F90
+drwxr-xr-x   3 gbisht  staff    102 Jan 29 14:24 DataMod_F90
+drwxr-xr-x   8 gbisht  staff    272 Jan 29 14:24 ExchangeMod_F90
+-rw-r--r--   1 gbisht  staff  13148 Feb 23 03:30 README.md
+-rw-r--r--   1 gbisht  staff   1355 Jan 29 14:24 emi_auto_generator.m
+drwxr-xr-x   6 gbisht  staff    204 Jan 29 14:04 test
+drwxr-xr-x  12 gbisht  staff    408 Jan 29 14:24 utils
+drwxr-xr-x  11 gbisht  staff    374 Jan 29 14:24 xml
+```
+
+3. Run `emi_auto_generator`
+
+```matlab
+>> emi_auto_generator
+Processing: Atm2LndType
+Processing: CanopyStateType
+Processing: ChemStateType
+Processing: EnergyFluxType
+Processing: SoilHydrologyType
+Processing: SoilStateType
+Processing: TemperatureType
+Processing: WaterFluxType
+Processing: WaterStateType
+```
+
+4. The auto-generated Fortran code is available in the `./F90` directory.
+
+```matlab
+>> ls -l F90
+total 376
+-rw-r--r--  1 gbisht  staff    402 Feb 23 03:48 EMI_Atm2LndType_Constants.F90
+-rw-r--r--  1 gbisht  staff   3805 Feb 23 03:48 EMI_Atm2LndType_DataMod.F90
+-rw-r--r--  1 gbisht  staff   5581 Feb 23 03:48 EMI_Atm2LndType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff    576 Feb 23 03:48 EMI_CanopyStateType_Constants.F90
+-rw-r--r--  1 gbisht  staff   4866 Feb 23 03:48 EMI_CanopyStateType_DataMod.F90
+-rw-r--r--  1 gbisht  staff   7859 Feb 23 03:48 EMI_CanopyStateType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff    167 Feb 23 03:48 EMI_ChemStateType_Constants.F90
+-rw-r--r--  1 gbisht  staff   2417 Feb 23 03:48 EMI_ChemStateType_DataMod.F90
+-rw-r--r--  1 gbisht  staff   2961 Feb 23 03:48 EMI_ChemStateType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff    481 Feb 23 03:48 EMI_EnergyFluxType_Constants.F90
+-rw-r--r--  1 gbisht  staff   4082 Feb 23 03:48 EMI_EnergyFluxType_DataMod.F90
+-rw-r--r--  1 gbisht  staff   4215 Feb 23 03:48 EMI_EnergyFluxType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff    449 Feb 23 03:48 EMI_SoilHydrologyType_Constants.F90
+-rw-r--r--  1 gbisht  staff   3970 Feb 23 03:48 EMI_SoilHydrologyType_DataMod.F90
+-rw-r--r--  1 gbisht  staff   5762 Feb 23 03:48 EMI_SoilHydrologyType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff   1190 Feb 23 03:48 EMI_SoilStateType_Constants.F90
+-rw-r--r--  1 gbisht  staff   8960 Feb 23 03:48 EMI_SoilStateType_DataMod.F90
+-rw-r--r--  1 gbisht  staff  10990 Feb 23 03:48 EMI_SoilStateType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff    699 Feb 23 03:48 EMI_TemperatureType_Constants.F90
+-rw-r--r--  1 gbisht  staff   5861 Feb 23 03:48 EMI_TemperatureType_DataMod.F90
+-rw-r--r--  1 gbisht  staff   8548 Feb 23 03:48 EMI_TemperatureType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff   2246 Feb 23 03:48 EMI_WaterFluxType_Constants.F90
+-rw-r--r--  1 gbisht  staff  12226 Feb 23 03:48 EMI_WaterFluxType_DataMod.F90
+-rw-r--r--  1 gbisht  staff  11818 Feb 23 03:48 EMI_WaterFluxType_ExchangeMod.F90
+-rw-r--r--  1 gbisht  staff   1872 Feb 23 03:48 EMI_WaterStateType_Constants.F90
+-rw-r--r--  1 gbisht  staff  11946 Feb 23 03:48 EMI_WaterStateType_DataMod.F90
+-rw-r--r--  1 gbisht  staff  11461 Feb 23 03:48 EMI_WaterStateType_ExchangeMod.F90
+```
+
+5. Copy the auto-generated Fortran code in E3SM's `components/clm/src/external_models/emi/src/elm_types` directory.
+
 
 
 ## Description
