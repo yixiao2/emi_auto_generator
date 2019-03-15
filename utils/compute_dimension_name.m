@@ -33,6 +33,10 @@ switch inp_dim_name
         out_dim_name = 'dimname_two';
     case {'endc - begc + 1','endc-begc+1'}
         out_dim_name = 'dimname_col_one_based_idx';
+    case {'nlevdecomp_full'}
+        out_dim_name = 'dimname_nlevdecomp_full';
+    case {'ndecomp_pools'}
+        out_dim_name = 'dimname_ndecomp_pools';
     otherwise
         error(['Unsupported dimension name: ' inp_dim_name]);
 end
