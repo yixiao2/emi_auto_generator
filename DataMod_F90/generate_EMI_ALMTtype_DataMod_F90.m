@@ -29,7 +29,7 @@ fprintf(fid,'    ! !DESCRIPTION:\n');
 fprintf(fid,'    ! Defines information of data exchanged between ELM and EM\n');
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !USES: \n');
-fprintf(fid,'    use ExternalModelIntefaceDataDimensionMod\n');
+fprintf(fid,'    use EMI_DataDimensionMod\n');
 fprintf(fid,'    implicit none\n');
 fprintf(fid,'    !\n');
 fprintf(fid,'    ! !ARGUMENTS:\n');
