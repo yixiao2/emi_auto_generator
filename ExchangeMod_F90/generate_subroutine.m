@@ -1,6 +1,7 @@
 function generate_subroutine(fid, elm_mod_name, elm_var_name, elm_type_name, vars, emi_constants_prefix, Pack_Or_Unpack, Level_text_name)
 
 constant_names      = compute_emi_constant_names(vars,emi_constants_prefix);
+clm_varpars         = compute_clm_varpars(vars);
 [associate_var_names, associate_var_names_buffers] = compute_associate_var_names(vars);
 
 fprintf(fid,'!-----------------------------------------------------------------------\n');
@@ -29,7 +30,10 @@ fprintf(fid,'    ! !USES:\n');
 % for vv = 1:length(constant_names)
 %     fprintf(fid,'    use ExternalModelConstants , only : %s\n',constant_names{vv});
 % end
-fprintf(fid,'    use clm_varpar             , only : nlevsoi, nlevgrnd, nlevsno\n');
+for ii = 1:length(clm_varpars)
+    fprintf(fid,'    use clm_varpar             , only : %s\n',clm_varpars{ii});
+end
+
 fprintf(fid,'    !\n');
 fprintf(fid,'    implicit none\n');
 fprintf(fid,'    !\n');
@@ -55,7 +59,7 @@ switch Level_text_name
         error(['Unknow Level_text_name: ', Level_text_name]);
 end
 
-fprintf(fid,'    integer                             :: f%s,%s,j\n',local_level_variable_name,local_level_variable_name);
+fprintf(fid,'    integer                             :: f%s,%s,j,k\n',local_level_variable_name,local_level_variable_name);
 fprintf(fid,'    class(emi_data), pointer            :: cur_data\n');
 fprintf(fid,'    logical                             :: need_to_pack\n');
 fprintf(fid,'    integer                             :: istage\n');
@@ -143,6 +147,33 @@ for vv = 1:length(vars)
                 otherwise
                     error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
             end
+            fprintf(fid,'                enddo\n');
+            fprintf(fid,'             enddo\n');
+            fprintf(fid,'             cur_data%sis_set = .true.\n', char(37));
+            fprintf(fid,'\n');
+        case 3
+            fprintf(fid,'          case (%s)\n',emi_constant_name);
+            fprintf(fid,'             do f%s = 1, num_filter\n',local_level_variable_name);
+            fprintf(fid,'                %s = filter(f%s)\n',local_level_variable_name,local_level_variable_name);
+            fprintf(fid,'                do j = %s, %s\n',vars{vv}.dim2_beg_name,vars{vv}.dim2_end_name);
+            fprintf(fid,'                   do k = %s, %s\n',vars{vv}.dim3_beg_name,vars{vv}.dim3_end_name);
+            switch Pack_Or_Unpack
+                case 'Pack'
+                    if (vars{vv}.is_real)
+                        fprintf(fid,'                      cur_data%sdata_real_3d(%s,j,k) = %s(%s,j,k)\n', char(37),local_level_variable_name,vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name);
+                    else
+                        fprintf(fid,'                      cur_data%sdata_int_3d(%s,j,k) = %s(%s,j,k)\n', char(37),local_level_variable_name,vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name);
+                    end
+                case 'Unpack'
+                    if (vars{vv}.is_real)
+                        fprintf(fid,'                      %s(%s,j,k) = cur_data%sdata_real_3d(%s,j,k)\n',vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
+                    else
+                        fprintf(fid,'                      %s(%s,j,k) = cur_data%sdata_int_3d(%s,j,k)\n',vars{vv}.elm_name(1:tmp(end)-1),local_level_variable_name, char(37),local_level_variable_name);
+                    end
+                otherwise
+                    error(['Unknown Pack_Or_Unpack: ' Pack_Or_Unpack]);
+            end
+            fprintf(fid,'                   enddo\n');
             fprintf(fid,'                enddo\n');
             fprintf(fid,'             enddo\n');
             fprintf(fid,'             cur_data%sis_set = .true.\n', char(37));
