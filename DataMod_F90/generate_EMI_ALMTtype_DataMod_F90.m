@@ -49,7 +49,7 @@ fprintf(fid,'    character (len=24) , intent(out) :: dim3_beg_name\n');
 fprintf(fid,'    character (len=24) , intent(out) :: dim3_end_name\n');
 fprintf(fid,'    character (len=24) , intent(out) :: dim4_beg_name\n');
 fprintf(fid,'    character (len=24) , intent(out) :: dim4_end_name\n');
-fprintf(fid,'    logical            , intent(out) :: data_found\n');
+fprintf(fid,'    logical            , intent(inout) :: data_found\n');
 fprintf(fid, '\n');
 fprintf(fid, '    is_int_type    = .false.\n');
 fprintf(fid, '    is_real_type   = .false.\n');
