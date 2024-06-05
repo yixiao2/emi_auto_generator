@@ -35,7 +35,7 @@ fprintf(fid,'    !\n');
 fprintf(fid,'    ! !ARGUMENTS:\n');
 fprintf(fid,'    integer            , intent(in)  :: data_id\n');
 fprintf(fid,'    integer            , intent(out) :: id_val\n');
-fprintf(fid,'    character (len=24) , intent(out) :: name_val\n');
+fprintf(fid,'    character (len=*) , intent(out) :: name_val\n');
 fprintf(fid,'    character (len=128), intent(out) :: long_name_val\n');
 fprintf(fid,'    character (len=24) , intent(out) :: units_val\n');
 fprintf(fid,'    logical            , intent(out) :: is_int_type\n');

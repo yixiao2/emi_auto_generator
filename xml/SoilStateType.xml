@@ -180,8 +180,8 @@
     </pack_vars>
     <unpack_vars>
         <column_level>
-            <name></name>
-            <unit>[]</unit>
+            <name>Soil matric potential</name>
+            <unit>[Pa]</unit>
             <emi_constant_name>SOIL_MATRIC_POTENTIAL</emi_constant_name>
             <elm_name>smp_l_col</elm_name>
             <dimension>2</dimension>

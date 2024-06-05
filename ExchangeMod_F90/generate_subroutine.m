@@ -31,7 +31,7 @@ fprintf(fid,'    ! !USES:\n');
 %     fprintf(fid,'    use ExternalModelConstants , only : %s\n',constant_names{vv});
 % end
 for ii = 1:length(clm_varpars)
-    fprintf(fid,'    use clm_varpar             , only : %s\n',clm_varpars{ii});
+    fprintf(fid,'    use elm_varpar             , only : %s\n',clm_varpars{ii});
 end
 
 fprintf(fid,'    !\n');
