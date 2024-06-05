@@ -13,7 +13,7 @@ fprintf(fid, '  !\n');
 fprintf(fid, '  use shr_kind_mod                          %s, only : r8 => shr_kind_r8\n',buffer_1);
 fprintf(fid, '  use shr_log_mod                           %s, only : errMsg => shr_log_errMsg\n',buffer_1);
 fprintf(fid, '  use abortutils                            %s, only : endrun\n',buffer_1);
-fprintf(fid, '  use clm_varctl                            %s, only : iulog\n',buffer_1);
+fprintf(fid, '  use elm_varctl                            %s, only : iulog\n',buffer_1);
 fprintf(fid, '  use EMI_DataMod                           %s, only : emi_data_list, emi_data\n',buffer_1);
 fprintf(fid, '  use EMI_DataDimensionMod                  %s, only : emi_data_dimension_list_type\n',buffer_1);
 fprintf(fid, '  use %s %s, only : %s\n', elm_mod_name,buffer_2,elm_type_name);
